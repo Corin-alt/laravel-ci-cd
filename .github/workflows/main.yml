@@ -49,6 +49,9 @@ jobs:
   registry_publish:
     runs-on: ubuntu-latest
     needs: test
+    permissions:
+      contents: read 
+      packages: write
     env:
       DOCKER_USERNAME: corin-alt 
       IMAGE_NAME: laravel-cicd-github
